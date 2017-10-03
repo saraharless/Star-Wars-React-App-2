@@ -9,6 +9,8 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.handleNameChange = this.handleNameChange.bind(this);
+
     this.state = {
       vehicles: [],
       value: '',
@@ -21,6 +23,10 @@ class App extends Component {
   // handleNameChange below:
   // See form lesson for details.
   // Enter your code below:
+
+  handleNameChange(event) {
+    this.setState({name: event.target.value});
+  }
 
 
 
