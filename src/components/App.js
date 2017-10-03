@@ -6,7 +6,15 @@ class App extends Component {
   // Set props and state below.
   // You should set state for vehicles (empty array), value (empty string), pilot (empty) string.
   // Enter your code below:
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      vehicles: [],
+      value: '',
+      pilot: ''
+    }
+  }
 
 
   // FORM: HANDLE INPUT CHANGES
