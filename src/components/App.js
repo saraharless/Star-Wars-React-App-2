@@ -10,6 +10,7 @@ class App extends Component {
     super(props);
 
     this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
     this.state = {
       vehicles: [],
@@ -25,7 +26,7 @@ class App extends Component {
   // Enter your code below:
 
   handleNameChange(event) {
-    this.setState({name: event.target.value});
+    this.setState({value: event.target.value});
   }
 
 
@@ -36,7 +37,13 @@ class App extends Component {
   // Once the form is sumbited, two things need to happen: set the state of pilot to the input value.
   // Then, set the value of the input back to an empty string.
   // Enter your code below:
-
+  handleSubmit(event){
+        event.preventDefault();
+        this.setState({
+          pilot: this.state.value,
+          value: ''
+        })
+    }
 
   // LIFECYCLE
   // Which lifecycle is best for fetching data?
